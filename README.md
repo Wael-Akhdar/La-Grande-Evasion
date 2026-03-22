@@ -27,9 +27,15 @@ The antagonist is driven by an autonomous AI that reacts to player presence.
 * **Networked Inventory:** Items picked up by a player trigger a raycast detection. An RPC is sent to allocate the item to the local player's UI slot and globally deactivate the item's GameObject across all clients (`DesactivateItem`), preventing item duplication.
 * **Cooperative Puzzles:** Features complex, state-driven puzzles (e.g., rotating paintings, color-coded sequences) that require multiple players to interact simultaneously.
 
-## 🎯 Demonstration
+## 🎯 Installation & Demonstration
 
+A pre-compiled Windows installer and its instruction manual are available for testing.
 
+1. Go to the **[Releases](../../releases)** tab of this repository.
+2. Download `La Grande Evasion 1.1 Setup (x64).exe` and the installation manual.
+3. Run the setup and follow the manual's instructions to connect to the multiplayer server and play.
+
+### Gameplay Overview
 
 https://github.com/user-attachments/assets/8685f126-00c0-49c2-bbe8-20ad76577cee
 
