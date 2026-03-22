@@ -39,3 +39,9 @@ A pre-compiled Windows installer and its instruction manual are available for te
 
 https://github.com/user-attachments/assets/8685f126-00c0-49c2-bbe8-20ad76577cee
 
+### 👥 The Team
+* **[Wael Akhdar](Ton_Lien_GitHub)**
+* **[Youcef Zahra](https://github.com/youcefzahra)**
+* **[Jessim Ziani](https://github.com/jessim-ziani)**
+* **[Ilann Oller]()**
+
