@@ -1,2 +1,35 @@
-# La-Grande-Evasion
-A cooperative 3D Escape Game (1-4 players) developed in Unity/C#.
+# La Grande Évasion - 3D Multiplayer Escape Game
+
+## 📖 Project Context
+
+**La Grande Évasion** is a first-year engineering project developed at EPITA. It is a 3D cooperative escape room game designed for 1 to 4 players. Players are trapped in a medical prison and must collaborate to solve puzzles, gather items, and evade an AI-controlled guard ("The Plague") to escape. 
+
+As the **Project Manager** and **Git Repository Administrator**, I led a team of five developers and was personally responsible for architecting the multiplayer network logic and the core character controller.
+
+## 🏗️ Technical Architecture & Features
+
+### 1. Multiplayer Network Engine (Photon PUN 2)
+The game relies on a real-time online multiplayer architecture using Photon Engine.
+* **Local Authority & Synchronization:** Networked objects (Players, AI, interactable doors/puzzles) are synchronized using `PhotonView` and `PhotonTransformView`. The `IsMine` property ensures that input processing and camera controls are strictly handled by the local client, preventing input overlap between players.
+* **Remote Procedure Calls (RPCs):** Global game states, such as player death, inventory updates, and puzzle solving, are broadcasted across the network using `[PunRPC]`. For instance, if a player's health drops to zero, an RPC triggers the "Game Over" canvas and disables audio for all connected clients simultaneously.
+
+### 2. Custom Character Controller
+Developed a robust, physics-safe C# character controller from scratch.
+* **Collision Management:** Replaced native Rigidbody forces with `transform.Translate` coupled with continuous Raycasting (`IsPathClear` function) to detect obstacles and prevent clipping or residual force accumulation when walking into walls.
+* **Dynamic Animation Blending:** Player animations are driven by an Animator State Machine using float variables (e.g., walking, sprinting, strafing) calculated directly from the input axes, ensuring seamless transitions via Blend Trees.
+
+### 3. Artificial Intelligence (NavMesh & State Machine)
+The antagonist is driven by an autonomous AI that reacts to player presence.
+* **Pathfinding:** Utilizes Unity's `NavMeshAgent` combined with `NavMeshModifiers` and `NavMeshLinks` to allow the AI to navigate complex geometry, including stairs and obstacles.
+* **Sensory State Machine:** The AI operates on a `GuardState` enumeration (Patrol, Chase). It autonomously patrols waypoints (`UpdatePatrol()`) and switches to pursuit mode (`UpdateChase()`) if a player enters its red-light Field of View or generates noise (e.g., sprinting).
+
+### 4. Synchronized Inventory & Puzzles
+* **Networked Inventory:** Items picked up by a player trigger a raycast detection. An RPC is sent to allocate the item to the local player's UI slot and globally deactivate the item's GameObject across all clients (`DesactivateItem`), preventing item duplication.
+* **Cooperative Puzzles:** Features complex, state-driven puzzles (e.g., rotating paintings, color-coded sequences) that require multiple players to interact simultaneously.
+
+## 🎯 Demonstration
+
+
+
+https://github.com/user-attachments/assets/8685f126-00c0-49c2-bbe8-20ad76577cee
+
