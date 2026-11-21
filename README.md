@@ -27,6 +27,10 @@ The antagonist is driven by an autonomous AI that reacts to player presence.
 * **Networked Inventory:** Items picked up by a player trigger a raycast detection. An RPC is sent to allocate the item to the local player's UI slot and globally deactivate the item's GameObject across all clients (`DesactivateItem`), preventing item duplication.
 * **Cooperative Puzzles:** Features complex, state-driven puzzles (e.g., rotating paintings, color-coded sequences) that require multiple players to interact simultaneously.
 
+## 🛠️ Skills
+
+`C#` · `Unity` · `Git` · `Photon Engine`
+
 ## 🎯 Installation & Demonstration
 
 A pre-compiled Windows installer and its instruction manual are available for testing.
@@ -40,8 +44,8 @@ A pre-compiled Windows installer and its instruction manual are available for te
 https://github.com/user-attachments/assets/8685f126-00c0-49c2-bbe8-20ad76577cee
 
 ### 👥 The Team
-* **[Wael Akhdar](Ton_Lien_GitHub)**
+* **[Wael Akhdar](https://github.com/Wael-Akhdar)**
 * **[Youcef Zahra](https://github.com/youcefzahra)**
 * **[Jessim Ziani](https://github.com/jessim-ziani)**
-* **[Ilann Oller]()**
+* **[Ilann Oller](https://github.com/skylegend31)**
 
