@@ -33,11 +33,13 @@ The antagonist is driven by an autonomous AI that reacts to player presence.
 
 ## 🎯 Installation & Demonstration
 
-A pre-compiled Windows installer and its instruction manual are available for testing.
+Pre-compiled Windows x64 builds are available for testing (Windows 10/11, internet connection required).
 
-1. Go to the **[Releases](../../releases)** tab of this repository.
-2. Download `La Grande Evasion 1.1 Setup (x64).exe` and the installation manual.
-3. Run the setup and follow the manual's instructions to connect to the multiplayer server and play.
+1. Open the **[latest release](../../releases/latest)** of this repository.
+2. Download either `La-Grande-Evasion-1.2-Setup-x64.exe` (installer) or `La-Grande-Evasion-1.2-win-x64.zip` (portable: extract it, then run `La Grande Evasion.exe`).
+3. **Play together (1–4 players):** everyone enters a player name; the host types a server name under **CREATE**, and the other players type the same name under **JOIN**.
+
+Controls: `WASD` / arrows to move, `Shift` to sprint, `E` to interact, `Esc` for options. The release notes list every control.
 
 ### Gameplay Overview
 
